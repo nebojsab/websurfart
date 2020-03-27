@@ -1,0 +1,40 @@
+$navColor: #ffffff;
+$navBackgroundColor: #666666;
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    background-color: $navBackgroundColor;
+}
+
+.nav-content {
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.nav-items {
+    display: inline-flex;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 20px;
+    color: $navColor;
+    margin-bottom: 0;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 0;
+}

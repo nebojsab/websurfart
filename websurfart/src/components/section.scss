@@ -1,0 +1,16 @@
+.section-content {
+    display: block;
+    width: 100%;
+    padding: 50px;
+
+    &:nth-child(even) {
+        background-color: #c1c1c1;
+    }
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 1200px;
+    font-size: 18px;
+    line-height: 24px;
+}
