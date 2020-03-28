@@ -1,5 +1,4 @@
-$navColor: #ffffff;
-$navBackgroundColor: #666666;
+$navColor: #333;
 
 
 .nav {
@@ -8,7 +7,6 @@ $navBackgroundColor: #666666;
     top: 0;
     width: 100%;
     display: block;
-    background-color: $navBackgroundColor;
 }
 
 .nav-content {
@@ -31,10 +29,17 @@ $navBackgroundColor: #666666;
     padding: 20px;
     color: $navColor;
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 .nav-item > .active {
     border-bottom: 1px solid #333;
+}
+
+.nav-name {
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .nav-logo {

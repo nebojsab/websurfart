@@ -1,7 +1,41 @@
 .header {
+
+    .nav {
+        display: block;
+        background-color: white;
+        box-shadow: 0 3px 12px #c1c1c1;
+    }
+
+    &.transparent-nav {
+        .nav {
+            display: none;
+        }
+    }
+
+    .my-name {
+        font-size: 90px;
+        font-weight: 700;
+        position: absolute;
+        color: #fff;
+        top: 100px;
+        left: 100px
+    }
+
+    .my-title {
+        font-size: 50px;
+        position: absolute;
+        color: #fff;
+        top: 180px;
+        left: 100px
+    }
 }
 
 .header-img {
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
 	height: 100vh;
 }
 

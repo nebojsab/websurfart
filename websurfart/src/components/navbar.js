@@ -13,12 +13,15 @@ export class Navbar extends Component {
         return (
             <nav className="nav" id="navbar">
                 <div className="nav-content">
-                    <img
+                    {/*<img
                         src={logo}
                         className="nav-logo"
                         alt="logo"
                         onClick={this.scrollToTop}
-                    />
+                    />*/}
+                    <div className="nav-name" onClick={this.scrollToTop}>
+                        Nebojsa Brnjasevic
+                    </div>
                     <ul className="nav-items">
                         <li className="nav-item">
                             <Link

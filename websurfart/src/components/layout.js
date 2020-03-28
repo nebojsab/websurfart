@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import dummyText from "../DummyText"
 
 import Header from "./header"
-import Navbar from "./navbar"
 import Section from "./section"
 import "typeface-raleway"
 import "./layout.css"
@@ -22,6 +21,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -29,8 +29,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Navbar />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header myName={data.site.siteMetadata.title} myTitle={data.site.siteMetadata.description} />
       <div
         style={{
           margin: `0 auto`,
