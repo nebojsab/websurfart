@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import logo from "../images/logo.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import "./navbar.scss";
 
 export class Navbar extends Component {
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
     render() {
         return (
             <nav className="nav" id="navbar">
@@ -15,11 +20,66 @@ export class Navbar extends Component {
                         onClick={this.scrollToTop}
                     />
                     <ul className="nav-items">
-                        <li className="nav-item">Section 1</li>
-                        <li className="nav-item">Section 2</li>
-                        <li className="nav-item">Section 3</li>
-                        <li className="nav-item">Section 4</li>
-                        <li className="nav-item">Section 5</li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="section1"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Section 1
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="section2"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Section 2
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="section3"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Section 3
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="section4"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Section 4
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                activeClass="active"
+                                to="section5"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Section 5
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

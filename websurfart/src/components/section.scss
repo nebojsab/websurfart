@@ -1,14 +1,14 @@
-.section-content {
+.section {
     display: block;
     width: 100%;
-    padding: 50px;
+    padding: 100px;
 
-    &:nth-child(even) {
+    &.section-dark {
         background-color: #c1c1c1;
     }
 }
 
-.section-inner {
+.section-content {
     width: 100%;
     max-width: 1200px;
     font-size: 18px;
