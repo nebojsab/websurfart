@@ -1,7 +1,13 @@
+@import "./_mixins.scss";
+
 .section {
     display: block;
     width: 100%;
     padding: 100px;
+
+    @include breakpoint(xs) {
+        padding: 100px 64px;
+    }
 
     &.section-dark {
         background-color: #c1c1c1;

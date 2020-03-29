@@ -20,27 +20,22 @@ export class Navbar extends Component {
 
     scrollToTop = () => {
         scroll.scrollToTop();
+        this.setState({ isSidebarOpen: !this.state.isSidebarOpen });
     };
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+
     }
 
     render() {
         const { isSidebarOpen } = this.state;
-        console.warn('state', this.state);
 
         return (
             <Fragment>
                 <nav className={`nav ${isSidebarOpen === true ? 'is-visible' : ''}`} id="navbar">
                     <div className="nav-content">
-                        {/*<img
-                        src={logo}
-                        className="nav-logo"
-                        alt="logo"
-                        onClick={this.scrollToTop}
-                    />*/}
-                        <div className="nav-name" onClick={this.scrollToTop && this.handleBurgerClick}>
+                        <div className="nav-name" onClick={this.handleBurgerClick && this.scrollToTop}>
                             Nebojsa Brnjasevic
                     </div>
                         <ul className="nav-items">

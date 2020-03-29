@@ -1,60 +1,79 @@
 @import "./_mixins.scss";
 
 .header {
+	.nav {
+		display: block;
+		background-color: white;
+		box-shadow: 0 0 10px #c1c1c1;
+	}
 
-    .nav {
-        display: block;
-        background-color: white;
-        box-shadow: 0 0 10px #c1c1c1;
+	&.transparent-nav {
+		.nav {
+			display: none;
+		}
+
+		.nav-burger {
+			display: none;
+		}
+	}
+
+	@keyframes slideInNameFromLeft {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
     }
+    
+    @keyframes slideInTitleFromLeft {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
 
-    &.transparent-nav {
-        .nav {
-            display: none;
-        }
+	.my-name {
+		animation: 1s ease-out 0s 1 slideInNameFromLeft;
+		font-size: 90px;
+		font-weight: 700;
+		position: absolute;
+		color: #fff;
+		top: 100px;
+		left: 100px;
 
-        .nav-burger {
-            display: none;
-        }
-    }
+		@include breakpoint(xs) {
+			font-size: 72px;
+			line-height: 86px;
+			left: 20px;
+		}
+	}
 
-    .my-name {
-        font-size: 90px;
-        font-weight: 700;
-        position: absolute;
-        color: #fff;
-        top: 100px;
-        left: 100px;
+	.my-title {
+		animation: 2s ease-out 0s 1 slideInTitleFromLeft;
+		font-size: 50px;
+		position: absolute;
+		color: #fff;
+		top: 180px;
+		left: 100px;
 
-        @include breakpoint(xs) {
-            font-size: 72px;
-            line-height: 86px;
-            left: 20px;
-        }
-    }
-
-    .my-title {
-        font-size: 50px;
-        position: absolute;
-        color: #fff;
-        top: 180px;
-        left: 100px;
-
-        @include breakpoint(xs) {
-            font-size: 40px;
-            line-height: 50px;
-            left: 20px;
-            top: 280px;
-        }
-    }
+		@include breakpoint(xs) {
+			font-size: 40px;
+			line-height: 50px;
+			left: 20px;
+			top: 280px;
+		}
+	}
 }
 
 .header-img {
-    background-image: url(../images/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    width: 100%;
+	background-image: url(../images/hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	width: 100%;
 	height: 100vh;
 }
 
