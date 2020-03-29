@@ -1,13 +1,19 @@
+@import "./_mixins.scss";
+
 .header {
 
     .nav {
         display: block;
         background-color: white;
-        box-shadow: 0 3px 12px #c1c1c1;
+        box-shadow: 0 0 10px #c1c1c1;
     }
 
     &.transparent-nav {
         .nav {
+            display: none;
+        }
+
+        .nav-burger {
             display: none;
         }
     }
@@ -18,7 +24,13 @@
         position: absolute;
         color: #fff;
         top: 100px;
-        left: 100px
+        left: 100px;
+
+        @include breakpoint(xs) {
+            font-size: 72px;
+            line-height: 86px;
+            left: 20px;
+        }
     }
 
     .my-title {
@@ -26,7 +38,14 @@
         position: absolute;
         color: #fff;
         top: 180px;
-        left: 100px
+        left: 100px;
+
+        @include breakpoint(xs) {
+            font-size: 40px;
+            line-height: 50px;
+            left: 20px;
+            top: 280px;
+        }
     }
 }
 

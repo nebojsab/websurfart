@@ -1,49 +1,123 @@
+@import "./_mixins.scss";
+
 $navColor: #333;
 
-
 .nav {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    width: 100%;
-    display: block;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+	display: block;
+
+	@include breakpoint(xs) {
+		height: 100%;
+		left: -100%;
+		transition: all 0.2s;
+
+		&.is-visible {
+			left: 0;
+            transition: all 0.2s;
+		}
+	}
 }
 
 .nav-content {
-    display: flex;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    align-items: center;
+	position: relative;
+	display: flex;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	align-items: center;
+
+	@include breakpoint(xs) {
+		flex-direction: column;
+	}
 }
 
 .nav-items {
-    display: inline-flex;
-    list-style: none;
-    justify-content: flex-start;
-    padding: 0;
-    margin: 0;
+	display: inline-flex;
+	list-style: none;
+	justify-content: flex-start;
+	padding: 0;
+	margin: 0;
+
+	@include breakpoint(xs) {
+		flex-direction: column;
+	}
 }
 
 .nav-item {
-    padding: 20px;
-    color: $navColor;
-    margin-bottom: 0;
-    cursor: pointer;
+	padding: 20px;
+	color: $navColor;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.nav-burger {
+	position: fixed;
+	z-index: 1;
+	display: none;
+	width: 30px;
+
+	.icon-bar {
+		background: #333;
+		width: 22px;
+		height: 1px;
+		display: block;
+		transition: all 0.2s;
+		margin: 5px 0;
+	}
+
+	.top-bar {
+		transform: rotate(0);
+		transform-origin: 10% 10%;
+	}
+
+	.middle-bar {
+		opacity: 1;
+		width: 28px;
+	}
+
+	.bottom-bar {
+		transform: rotate(0);
+		transform-origin: 10% 90%;
+	}
+
+	&.is-clicked {
+		.top-bar {
+			transform: rotate(45deg);
+			transform-origin: 10% 10%;
+		}
+
+		.middle-bar {
+			opacity: 0;
+		}
+
+		.bottom-bar {
+			transform: rotate(-45deg);
+			transform-origin: 10% 90%;
+		}
+	}
+
+	@include breakpoint(xs) {
+		display: block;
+		top: 20px;
+		left: 20px;
+	}
 }
 
 .nav-item > .active {
-    border-bottom: 1px solid #333;
+	border-bottom: 1px solid #333;
 }
 
 .nav-name {
-    font-weight: 900;
-    text-transform: uppercase;
-    cursor: pointer;
+	font-weight: 900;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .nav-logo {
-    height: 40px;
-    width: auto;
-    margin-bottom: 0;
+	height: 40px;
+	width: auto;
+	margin-bottom: 0;
 }
