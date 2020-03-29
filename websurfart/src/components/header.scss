@@ -45,10 +45,23 @@
 		left: 100px;
 
 		@include breakpoint(xs) {
-			font-size: 72px;
-			line-height: 86px;
+			font-size: 66px;
+            line-height: 74px;
 			left: 20px;
-		}
+        }
+        
+        @include breakpoint(sm) {
+			font-size: 110px;
+            line-height: 120px;
+			left: 20px;
+        }
+        
+        @include breakpoint(landscapexs) {
+            top: 80px;
+            font-size: 66px;
+            line-height: 74px;
+			left: 120px;
+        }
 	}
 
 	.my-title {
@@ -60,11 +73,25 @@
 		left: 100px;
 
 		@include breakpoint(xs) {
-			font-size: 40px;
-			line-height: 50px;
+			font-size: 32px;
+            line-height: 48px;
 			left: 20px;
 			top: 280px;
-		}
+        }
+        
+        @include breakpoint(sm) {
+			font-size: 70px;
+            line-height: 80px;
+			left: 20px;
+			top: 380px;
+        }
+        
+        @include breakpoint(landscapexs) {
+            top: 160px;
+            font-size: 32px;
+            line-height: 48px;
+			left: 120px;
+        }
 	}
 }
 
