@@ -22,6 +22,10 @@ export class Navbar extends Component {
         scroll.scrollToTop();
     };
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render() {
         const { isSidebarOpen } = this.state;
         console.warn('state', this.state);
@@ -36,7 +40,7 @@ export class Navbar extends Component {
                         alt="logo"
                         onClick={this.scrollToTop}
                     />*/}
-                        <div className="nav-name" onClick={this.scrollToTop}>
+                        <div className="nav-name" onClick={this.scrollToTop && this.handleBurgerClick}>
                             Nebojsa Brnjasevic
                     </div>
                         <ul className="nav-items">
