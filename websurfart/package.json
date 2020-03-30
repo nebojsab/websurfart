@@ -19,6 +19,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-scroll": "^1.7.16",
+    "react-scroll-parallax": "^2.3.2",
     "typeface-raleway": "^0.0.75"
   },
   "devDependencies": {

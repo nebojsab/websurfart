@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import dummyText from "../DummyText"
+import { SectionContent } from "./SectionContent"
+import { Element } from 'react-scroll'
 
 import Header from "./header"
-import Section from "./section"
 import "typeface-raleway"
 import "./layout.css"
 
@@ -37,36 +37,31 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Section
-          title="Section 1"
-          subtitle={dummyText}
-          dark={true}
-          id="section1"
-        />
-        <Section
-          title="Section 2"
-          subtitle={dummyText}
-          dark={false}
-          id="section2"
-        />
-        <Section
-          title="Section 3"
-          subtitle={dummyText}
-          dark={true}
-          id="section3"
-        />
-        <Section
-          title="Section 4"
-          subtitle={dummyText}
-          dark={false}
-          id="section4"
-        />
-        <Section
-          title="Section 5"
-          subtitle={dummyText}
-          dark={true}
-          id="section5"
-        />
+        <Element>
+          <SectionContent
+            id="section1"
+            title="Section 1" />
+        </Element>
+        <Element>
+          <SectionContent
+            id="section2"
+            title="Section 2" />
+        </Element>
+        <Element>
+          <SectionContent
+            id="section3"
+            title="Section 3" />
+        </Element>
+        <Element>
+          <SectionContent
+            id="section4"
+            title="Section 4" />
+        </Element>
+        <Element>
+          <SectionContent
+            id="section5"
+            title="Section 5" />
+        </Element>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
