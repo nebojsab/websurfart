@@ -9,8 +9,44 @@
         padding: 100px 64px;
     }
 
-    &.section-dark {
-        background-color: #c1c1c1;
+    &.is-green {
+        background-color: #8FAA9D;
+
+        .section-content {
+            color: #fff;
+        }
+    }
+
+    &.is-turquoise {
+        background-color: #6094A3;
+
+        .section-content {
+            color: #fff;
+        }
+    }
+
+    &.is-black {
+        background-color: #000;
+
+        .section-content {
+            color: #fff;
+        }
+    }
+
+    &.is-blue {
+        background-color: #1E2532;
+
+        .section-content {
+            color: #fff;
+        }
+    }
+
+    &.is-gray {
+        background-color: #737777;
+
+        .section-content {
+            color: #fff;
+        }
     }
 }
 

@@ -40,27 +40,32 @@ const Layout = ({ children }) => {
         <Element>
           <SectionContent
             id="section1"
-            title="Section 1" />
+            title="Section 1" 
+            bcg="black"/>
         </Element>
         <Element>
           <SectionContent
             id="section2"
-            title="Section 2" />
+            title="Section 2" 
+            bcg="blue"/>
         </Element>
         <Element>
           <SectionContent
             id="section3"
-            title="Section 3" />
+            title="Section 3" 
+            bcg="turquoise"/>
         </Element>
         <Element>
           <SectionContent
             id="section4"
-            title="Section 4" />
+            title="Section 4"
+            bcg="green" />
         </Element>
         <Element>
           <SectionContent
             id="section5"
-            title="Section 5" />
+            title="Section 5" 
+            bcg="gray"/>
         </Element>
         <footer>
           © {new Date().getFullYear()}

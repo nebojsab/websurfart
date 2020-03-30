@@ -1,6 +1,7 @@
 @import "./_mixins.scss";
 
 $navColor: #333;
+$navColorActive: #fff;
 
 .nav {
 	position: fixed;
@@ -61,19 +62,33 @@ $navColor: #333;
 		width: 40px;
 		height: 40px;
 		border-radius: 100%;
-		background-color: #333;
+		background-color: #c1c1c1;
 		left: -9px;
 		top: -8px;
+		transition: all .5s;
+    }
+    
+    &::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+        height: 0;
+        left: 32%;
+        top: 44%;
+        background-color: #333;
+		border-radius: 100%;
 		transition: all .5s;
 	}
 
 	.icon-bar {
-		background: #fff;
+		background: #333;
 		width: 16px;
 		height: 1px;
 		display: block;
 		transition: all 0.2s;
 		margin: 5px 3px;
+		transition: all .5s;
 	}
 
 	.top-bar {
@@ -83,7 +98,7 @@ $navColor: #333;
 
 	.middle-bar {
 		opacity: 1;
-		width: 28px;
+		width: 16px;
 		position: relative;
 	}
 
@@ -93,21 +108,24 @@ $navColor: #333;
 	}
 
 	&.is-clicked {
-		&::before {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 0;
-			height: 0;
+        
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
             border-radius: 100%;
-			background-color: #fff;
+            background-color: #333;
+            left: -29%;
+            top: -33%;
             transition: all .5s;
-            top: 50%;
-            left: calc(50% - 4px);
-		}
+        }
 
 		.icon-bar {
-			background: #333;
+            background: #fff;
+            position: relative;
+            z-index: 1;
 		}
 
 		.top-bar {
@@ -145,8 +163,8 @@ $navColor: #333;
 			width: 100%;
 
 			&.active {
-				border-top: 3px solid #333;
-				border-bottom: 3px solid #333;
+                background-color: #333;
+                color: $navColorActive;
 
 				&::after {
 					content: none;
