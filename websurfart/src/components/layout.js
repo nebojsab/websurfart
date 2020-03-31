@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { SectionContent } from "./SectionContent"
 import { Element } from 'react-scroll'
+import ParallaxElOne from "./ParallaxElOne"
 
 import Header from "./header"
 import "typeface-raleway"
@@ -29,6 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <ParallaxElOne />
       <Header myName={data.site.siteMetadata.title} myTitle={data.site.siteMetadata.description} />
       <div
         style={{
@@ -40,32 +42,37 @@ const Layout = ({ children }) => {
         <Element>
           <SectionContent
             id="section1"
-            title="Section 1" 
-            bcg="black"/>
+            title="About"
+            bcg="black"
+            pageName="about" />
         </Element>
         <Element>
           <SectionContent
             id="section2"
-            title="Section 2" 
-            bcg="blue"/>
+            title="Section 2"
+            bcg="blue"
+            pageName="about" />
         </Element>
         <Element>
           <SectionContent
             id="section3"
-            title="Section 3" 
-            bcg="turquoise"/>
+            title="Section 3"
+            bcg="turquoise"
+            pageName="about" />
         </Element>
         <Element>
           <SectionContent
             id="section4"
             title="Section 4"
-            bcg="green" />
+            bcg="green"
+            pageName="about" />
         </Element>
         <Element>
           <SectionContent
             id="section5"
-            title="Section 5" 
-            bcg="gray"/>
+            title="Section 5"
+            bcg="gray"
+            pageName="about" />
         </Element>
         <footer>
           © {new Date().getFullYear()}

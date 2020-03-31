@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import Navbar from "./navbar"
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"
 
 import "./header.scss";
 export class Header extends Component {
