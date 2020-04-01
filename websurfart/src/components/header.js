@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React, { Component } from "react"
 import Navbar from "./navbar"
 import { Link } from "react-scroll"
+import DogVideo from "../images/typing.mp4"
 
 import "./header.scss";
 export class Header extends Component {
@@ -48,7 +49,11 @@ export class Header extends Component {
           ref={(heroElement) => { this.heroElement = heroElement }}
           className={`header-img`}
           id="hero-img"
-        ></div>
+        >
+        <video loop autoPlay muted>
+          <source src={DogVideo} type="video/mp4" />
+        </video>
+        </div>
         <div
           id="scroller"
           className="scroller">

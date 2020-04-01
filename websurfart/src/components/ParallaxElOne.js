@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Plx from "react-plx"
-
+import prlx_one from "../images/prlx_one_animated.svg"
 
 
 const style = {
@@ -29,54 +29,39 @@ export class ParallaxElOne extends Component {
 
         const exampleParallaxData = [
             {
-                start: height,
-                duration: 800,
+                start: height - 300,
+                duration: 1500,
                 properties: [
                     {
                         startValue: 0,
-                        endValue: 90,
+                        endValue: 125,
                         property: "rotate"
                     },
                     {
-                        startValue: 1,
+                        startValue: 0.5,
                         endValue: 1.5,
                         property: "scale"
                     },
                     {
-                        startValue: 0,
-                        endValue: 0.5,
+                        startValue: 0.15,
+                        endValue: 0.75,
                         property: "opacity"
                     },
                     {
-                        startValue: -200,
-                        endValue: 200,
-                        property: "translateX"
-                    },
-                    {
-                        startValue: -200,
-                        endValue: 200,
+                        startValue: 0,
+                        endValue: 500,
                         property: "translateY"
                     }
                 ]
             },
             {
                 start: '.section3',
-                duration: 300,
+                duration: 900,
                 properties: [
                     {
-                        startValue: "#3cb99c",
-                        endValue: "rgba(50,50,200,0.8)",
-                        property: "backgroundColor"
-                    },
-                    {
-                        startValue: 0,
-                        endValue: 100,
-                        property: "translateY"
-                    },
-                    {
-                        startValue: 0.75,
-                        endValue: 1,
-                        property: "opacity"
+                        startValue: 125,
+                        endValue: 360,
+                        property: "rotate"
                     }
                 ]
             },
@@ -85,19 +70,19 @@ export class ParallaxElOne extends Component {
                 duration: 1000,
                 properties: [
                     {
-                        startValue: 100,
-                        endValue: 0,
+                        startValue: 360,
+                        endValue: 360,
+                        property: "rotate"
+                    },
+                    {
+                        startValue: 500,
+                        endValue: 1000,
                         property: "translateY"
                     },
                     {
                         startValue: 1.5,
-                        endValue: 2,
+                        endValue: 4,
                         property: "scale"
-                    },
-                    {
-                        startValue: 180,
-                        endValue: 0,
-                        property: "rotate"
                     },
                     // Blur is not performant
                     // Used just as an example for CSS filters
@@ -109,25 +94,6 @@ export class ParallaxElOne extends Component {
                 ]
             }
         ];
-        
-        const styles = {
-            width: 100,
-            height: 100,
-            lineHeight: "100px",
-            textAlign: "center",
-            borderTopLeftRadius: 100,
-            borderTopRightRadius: 30,
-            borderBottomLeftRadius: 30,
-            borderBottomRightRadius: 100,
-            backgroundColor: "#34ba9c",
-            color: "#fff",
-            left: "50%",
-            marginLeft: -50,
-            top: 100,
-            position: "fixed",
-            fontFamily: "Helvetica, Arial, sans-serif",
-            opacity: 0,
-        };
 
         return (
             <div>
@@ -138,8 +104,8 @@ export class ParallaxElOne extends Component {
                     ref={(divElement) => { this.divElement = divElement }}
                 >
                 </div>
-                <Plx parallaxData={exampleParallaxData} style={styles}>
-                </Plx>
+                {/*<Plx parallaxData={exampleParallaxData} className="prlx_one">
+        </Plx>*/}
             </div>
         )
     }

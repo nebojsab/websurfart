@@ -49,7 +49,7 @@ export class SectionContent extends Component {
         return (
             <div className={`section ${bcg === 'green' ? 'is-green' : ''} ${bcg === 'blue' ? 'is-blue' : ''} ${bcg === 'gray' ? 'is-gray' : ''} ${bcg === 'black' ? 'is-black' : ''} ${bcg === 'turquoise' ? 'is-turquoise' : ''}`}>
                 <div className={`section-content ${id}`} id={id} pageName={pageName}>
-                    <h1>{title}</h1>
+                    <h1 className="wsa-section-title">{title}</h1>
                     {this.handleContent()}
                 </div>
             </div>

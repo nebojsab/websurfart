@@ -52,7 +52,77 @@
 
 .section-content {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     font-size: 18px;
     line-height: 24px;
+    margin: auto;
+
+    .wsa-section-title {
+        font-size: 72px;
+        font-weight: 300;
+        font-style: italic;
+        margin: 60px 0;
+        padding-bottom: 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(229,229,229,0) 80%,rgba(229,229,229,0) 100%);
+
+        }
+    }
+}
+
+.wsa-section {
+    display: flex;
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+    }
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    &-headings {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-text {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(xs) {
+            margin: 60px 0;
+        }
+    }
+}
+
+.wsa-h2 {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 60px;
+    word-break: break-word;
+}
+
+.wsa-h3 {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 40px;
+    word-break: break-word;
+}
+
+.wsa-p1 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    word-break: break-word;
 }

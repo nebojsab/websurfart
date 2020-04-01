@@ -23,9 +23,9 @@
 		100% {
 			transform: translateX(0);
 		}
-    }
-    
-    @keyframes slideInTitleFromLeft {
+	}
+
+	@keyframes slideInTitleFromLeft {
 		0% {
 			transform: translateX(-100%);
 		}
@@ -40,27 +40,29 @@
 		font-weight: 700;
 		position: absolute;
 		color: #fff;
-		top: 100px;
+		top: 40%;
 		left: 100px;
 
 		@include breakpoint(xs) {
 			font-size: 66px;
-            line-height: 74px;
+			line-height: 74px;
 			left: 20px;
-        }
-        
-        @include breakpoint(sm) {
+			top: 30%;
+		}
+
+		@include breakpoint(sm) {
 			font-size: 110px;
-            line-height: 120px;
+			line-height: 120px;
 			left: 20px;
-        }
-        
-        @include breakpoint(landscapexs) {
-            top: 80px;
-            font-size: 66px;
-            line-height: 74px;
+			top: 30%;
+		}
+
+		@include breakpoint(landscapexs) {
+			top: 80px;
+			font-size: 66px;
+			line-height: 74px;
 			left: 120px;
-        }
+		}
 	}
 
 	.my-title {
@@ -68,39 +70,49 @@
 		font-size: 50px;
 		position: absolute;
 		color: #fff;
-		top: 180px;
+		top: 50%;
 		left: 100px;
 
 		@include breakpoint(xs) {
 			font-size: 32px;
-            line-height: 48px;
+			line-height: 48px;
 			left: 20px;
-			top: 280px;
-        }
-        
-        @include breakpoint(sm) {
+			top: 50%;
+		}
+
+		@include breakpoint(sm) {
 			font-size: 70px;
-            line-height: 80px;
+			line-height: 80px;
 			left: 20px;
-			top: 380px;
-        }
-        
-        @include breakpoint(landscapexs) {
-            top: 160px;
-            font-size: 32px;
-            line-height: 48px;
+			top: 55%;
+		}
+
+		@include breakpoint(landscapexs) {
+			top: 160px;
+			font-size: 32px;
+			line-height: 48px;
 			left: 120px;
-        }
+		}
 	}
 }
 
 .header-img {
-	background-image: url(../images/hero.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 50%;
+	// background-image: url(../images/hero.jpg);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: 50% 50%;
+	background-color: #000;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
+
+	video {
+		height: 100vh;
+
+		@include breakpoint(xs) {
+			margin-left: -100%;
+		}
+	}
 }
 
 #scroller a {
@@ -165,4 +177,14 @@
 	100% {
 		opacity: 0;
 	}
+}
+
+.prlx_one {
+	width: 400px;
+	height: 400px;
+	display: block;
+	background-image: url(../images/prlx_one.svg);
+	background-repeat: no-repeat;
+	position: fixed;
+	opacity: 0;
 }
