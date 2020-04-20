@@ -1,5 +1,22 @@
 @import "./_mixins.scss";
 
+.section-plh {
+    &:nth-child(odd) {
+        
+        .wsa-section {
+            flex-direction: row-reverse;
+
+            DIV:nth-child(1) {
+                margin-right: 0;
+            }
+
+            DIV:nth-child(2) {
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
 .section {
     display: block;
     width: 100%;
@@ -10,7 +27,7 @@
     }
 
     &.is-green {
-        background-color: #8FAA9D;
+        background-color: #8faa9d;
 
         .section-content {
             color: #fff;
@@ -18,7 +35,9 @@
     }
 
     &.is-turquoise {
-        background-color: #6094A3;
+        background-color: #6094a3;
+        z-index: 1;
+        position: relative;
 
         .section-content {
             color: #fff;
@@ -34,10 +53,12 @@
     }
 
     &.is-blue {
-        background-color: #1E2532;
+        background-color: #1e2532;
+        padding: 0;
 
         .section-content {
             color: #fff;
+            max-width: unset;
         }
     }
 
@@ -57,24 +78,40 @@
     line-height: 24px;
     margin: auto;
 
+    .wsa-section {
+
+        DIV:nth-child(1) {
+            margin-right: 40px;
+        }
+
+        DIV:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+
     .wsa-section-title {
         font-size: 72px;
         font-weight: 300;
-        font-style: italic;
+        // font-style: italic;
         margin: 60px 0;
         padding-bottom: 20px;
         position: relative;
+        // animation: blinkText 1.2s infinite;
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: 0;
-            height: 1px;
-            width: 100%;
-            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(229,229,229,0) 80%,rgba(229,229,229,0) 100%);
-
-        }
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     bottom: 0;
+        //     height: 1px;
+        //     width: 100%;
+        //     background: linear-gradient(
+        //         to right,
+        //         rgba(255, 255, 255, 1) 0%,
+        //         rgba(229, 229, 229, 0) 80%,
+        //         rgba(229, 229, 229, 0) 100%
+        //     );
+        // }
     }
 }
 
@@ -125,4 +162,31 @@
     font-size: 20px;
     line-height: 24px;
     word-break: break-word;
+}
+
+@keyframes blinkText {
+    0% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    25% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0.2;
+    }
+    75% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
 }

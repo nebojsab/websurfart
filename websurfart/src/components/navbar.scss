@@ -1,7 +1,7 @@
 @import "./_mixins.scss";
 
-$navColor: #333;
-$navColorActive: #fff;
+$navColor: #fff;
+$navColorActive: #f0f0f0;
 
 .nav {
 	position: fixed;
@@ -163,8 +163,8 @@ $navColorActive: #fff;
 			width: 100%;
 
 			&.active {
-                background-color: #333;
-                color: $navColorActive;
+                background-color: #f0f0f0;
+                color: #333;
 
 				&::after {
 					content: none;
@@ -183,7 +183,7 @@ $navColorActive: #fff;
 }
 
 .nav-item > .active {
-	color: #333;
+	color: #f0f0f0;
 	font-weight: 500;
 
 	&::after {
@@ -194,7 +194,7 @@ $navColorActive: #fff;
 		height: 3px;
 		bottom: -18px;
 		left: 0;
-		background-color: #333;
+		background-color: #f0f0f0;
 	}
 }
 
@@ -203,6 +203,7 @@ $navColorActive: #fff;
 	text-transform: uppercase;
 	cursor: pointer;
 	margin-right: 30px;
+	color: $navColor;
 
 	@include breakpoint(xs) {
 		height: 100px;

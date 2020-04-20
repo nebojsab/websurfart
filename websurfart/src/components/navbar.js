@@ -48,7 +48,7 @@ export class Navbar extends Component {
                                     duration={500}
                                     onClick={this.handleBurgerClick}
                                 >
-                                    Section 1
+                                    About
                             </Link>
                             </li>
                             <li className="nav-item">
@@ -61,7 +61,7 @@ export class Navbar extends Component {
                                     duration={500}
                                     onClick={this.handleBurgerClick}
                                 >
-                                    Section 2
+                                    My Work
                             </Link>
                             </li>
                             <li className="nav-item">

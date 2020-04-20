@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "CSS (Less, ScSS, PostCSS)",
+        "percentage": "100"
+    },{
+        "id": 2,
+        "name": "HTML",
+        "percentage": "100"
+    },{
+        "id": 3,
+        "name": "JavaScript",
+        "percentage": "70"
+    },{
+        "id": 4,
+        "name": "AngularJS",
+        "percentage": "50"
+    },{
+        "id": 5,
+        "name": "React",
+        "percentage": "70"
+    }
+]

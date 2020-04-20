@@ -5,12 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { SectionContent } from "./SectionContent"
 import { Element } from 'react-scroll'
-import ParallaxElOne from "./ParallaxElOne"
 
 import Header from "./header"
 import "typeface-raleway"
@@ -29,8 +28,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <ParallaxElOne />
+    <Fragment>
       <Header myName={data.site.siteMetadata.title} myTitle={data.site.siteMetadata.description} />
       <div
         style={{
@@ -39,35 +37,34 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Element>
+        <Element className="section-plh">
           <SectionContent
             id="section1"
             title="About"
             bcg="black"
             pageName="about" />
         </Element>
-        <Element>
+        <Element className="section-plh">
           <SectionContent
             id="section2"
-            title="Section 2"
             bcg="blue"
-            pageName="about" />
+            pageName="my-work" />
         </Element>
-        <Element>
+        <Element className="section-plh">
           <SectionContent
             id="section3"
-            title="Section 3"
+            title="Knows and need to knows"
             bcg="turquoise"
-            pageName="about" />
+            pageName="skills" />
         </Element>
-        <Element>
+        <Element className="section-plh">
           <SectionContent
             id="section4"
             title="Section 4"
             bcg="green"
             pageName="about" />
         </Element>
-        <Element>
+        <Element className="section-plh">
           <SectionContent
             id="section5"
             title="Section 5"
@@ -78,7 +75,7 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()}
         </footer>
       </div>
-    </>
+    </Fragment>
   )
 }
 

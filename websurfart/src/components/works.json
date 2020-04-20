@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "src": "http://websurfart.com/images/34.jpg",
+        "title": "Embroker",
+        "subTitle": "Embroker is a tech based insurance startup from San Francisco.",
+        "description": "What's done by me: Worked on all styles from public website to user application. CSS, Less, PostCSS, AngularJS, React",
+        "url": "https://www.embroker.com/",
+        "overlay": "blue"
+    },
+    {
+        "id": 2,
+        "src": "http://websurfart.com/images/33.jpg",
+        "title": "LemonBrew",
+        "subTitle": "US Tech-enabled,realestate matching platform startup from Hoboken, NJ.",
+        "description": "What's done by me: Worked on all styles from public website to user application. CSS, SCSS, React",
+        "url": "https://lemonbrew.com/",
+        "overlay": "yellow"
+    },
+    {
+        "id": 3,
+        "src": "http://websurfart.com/images/1.jpg",
+        "title": "Kiropraktor Glostrup",
+        "subTitle": "Danish kiropraktor clinic located in Copenhagen.",
+        "description": "What's done by me: Website design implementation, development and hosting (Installation and configuration)",
+        "url": "http://www.kiropraktorglostrup.dk/",
+        "overlay": "green"
+    },
+    {
+        "id": 4,
+        "src": "http://websurfart.com/images/2.jpg",
+        "title": "LEGlas",
+        "subTitle": "Copenhagen glaziers company.",
+        "description": "What's done by me: Website design, development and hosting (Installation and configuration)",
+        "url": "https://leglas.dk/",
+        "overlay": "red"
+    },
+    {
+        "id": 5,
+        "src": "http://websurfart.com/images/20.jpg",
+        "title": "LE Glas Webbutik",
+        "subTitle": "Copenhagen glaziers company Web Shop",
+        "description": "What's done by me: Website design, development and hosting (Installation and configuration)",
+        "url": "https://leglas.dk/webshop/",
+        "overlay": "orange"
+    },
+    {
+        "id": 6,
+        "src": "http://websurfart.com/images/3.jpg",
+        "title": "Arme De L'Amour",
+        "subTitle": "Arme De L'Amour is brand made by Ivana Berendika Jermoluk. She is luxury jewelry designer.",
+        "description": "What's done by me: Website design, development and hosting (Installation and configuration)",
+        "url": "https://www.armedelamour.com/",
+        "overlay": "black"
+    },
+    {
+        "id": 7,
+        "src": "http://websurfart.com/images/5.jpg",
+        "title": "Teretana Maximus",
+        "subTitle": "Maximus Fitnes Centar.",
+        "description": "What's done by me: Website design template preparation",
+        "url": "http://maximusteretana.rs/",
+        "overlay": "blue"
+    },
+    {
+        "id": 8,
+        "src": "http://websurfart.com/images/7.jpg",
+        "title": "Alba Poliklinika",
+        "subTitle": "Poliklinika Alba.",
+        "description": "What's done by me: Website design template preparation",
+        "url": "http://www.albaprokic.com/sr/pocetna/",
+        "overlay": "green"
+    },
+    {
+        "id": 10,
+        "src": "http://websurfart.com/images/17.jpg",
+        "title": "Ćirić d.o.o.",
+        "subTitle": "Sales of office supplies and school forms.",
+        "description": "What's done by me: Website design template preparation",
+        "url": "http://www.ciricdoo.rs/",
+        "overlay": "yellow"
+    }
+]

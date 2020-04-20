@@ -1,0 +1,48 @@
+@import "./_mixins.scss";
+
+$start: 1;
+$end: 10;
+
+@for $i from $start through $end {
+  $i: 10 * $i;
+  .progress-bar-#{$i}::before { width: $i * 1% }
+}
+
+.progress-bar-100 {
+
+    &::before {
+        width: calc(100% - 0.3%);
+
+        @include breakpoint(xs) {
+            width: calc(100% - 0.5%);
+        }
+
+        @include breakpoint(sm) {
+            width: calc(100% - 0.4%);
+        }
+    }
+}
+
+.progress-holder {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+}
+
+.progress-bar {
+    display: block;
+}
+
+.progress-bar::before {
+    border-radius: 99px;
+    position: absolute;
+    height: 8px;
+    margin: 1px 0 0 1px;
+    background: #8faa9d;
+    content: '';
+    transition: width .2s;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import About from "./About";
+import MyWork from "./MyWork";
+import Skills from "./Skills";
 
 import "./section.scss";
 
@@ -12,24 +14,15 @@ export class SectionContent extends Component {
         pageName: PropTypes.string,
     };
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = this.getInitialState();
-    // }
-
-    // getInitialState = () => ({
-    //     name: '',
-    // });
-
     handleContent() {
         const { pageName } = this.props;
 
         if (pageName === 'about') {
             return <About />
-        } else if (pageName === 'work') {
-            return <About />
-        } else if (pageName === 'experience') {
-            return <About />
+        } else if (pageName === 'my-work') {
+            return <MyWork />
+        } else if (pageName === 'skills') {
+            return <Skills />
         } else if (pageName === 'contact') {
             return <About />
         } else if (pageName === 'work') {
@@ -49,7 +42,7 @@ export class SectionContent extends Component {
         return (
             <div className={`section ${bcg === 'green' ? 'is-green' : ''} ${bcg === 'blue' ? 'is-blue' : ''} ${bcg === 'gray' ? 'is-gray' : ''} ${bcg === 'black' ? 'is-black' : ''} ${bcg === 'turquoise' ? 'is-turquoise' : ''}`}>
                 <div className={`section-content ${id}`} id={id} pageName={pageName}>
-                    <h1 className="wsa-section-title">{title}</h1>
+                    {title ? <h1 className="wsa-section-title">{title}</h1> : null}
                     {this.handleContent()}
                 </div>
             </div>
