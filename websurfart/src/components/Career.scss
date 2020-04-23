@@ -1,0 +1,104 @@
+@import "./_mixins.scss";
+
+.career-wrap {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+    }
+}
+
+.career-side {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    position: relative;
+
+    @include breakpoint(xs) {
+        flex: 1 1 100%;
+    }
+
+    @include breakpoint(sm) {
+        flex: 1 1 40%;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        right: -7px;
+        top: 7px;
+        border: 1px solid #333;
+        border-radius: 100%;
+        background-color: #fff;
+
+        @include breakpoint(xs) {
+            content: none;
+        }
+    }
+}
+
+.career-desc {
+    padding-bottom: 20px;
+}
+
+.career-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 75%;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    border-left: 1px solid #333;
+
+    @include breakpoint(xs) {
+        flex: 1 1 100%;
+        border-left: none;
+        padding-left: 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #333;
+    }
+
+    @include breakpoint(sm) {
+        flex: 1 1 60%;
+    }
+}
+
+.career-name,
+.career-position {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.career-date {
+    @include breakpoint(xs) {
+        margin-bottom: 30px;
+    }
+}
+
+.career-content {
+    line-height: 28px;
+}
+
+.career-info {
+    margin-top: 20px;
+}
+
+.career-date {
+    color: #333;
+}
+
+.career-marker {
+    .career-marker-name {
+        margin: 0 0 20px 10px;
+    }
+}
+
+.career-url {
+    color: #333;
+    text-decoration: none;
+}

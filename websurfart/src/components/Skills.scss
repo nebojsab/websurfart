@@ -1,15 +1,23 @@
 @import "./_mixins.scss";
 
 $start: 1;
-$end: 10;
+$end: 100;
 
 @for $i from $start through $end {
-  $i: 10 * $i;
-  .progress-bar-#{$i}::before { width: $i * 1% }
+    $i: 1 * $i;
+    .progress-bar-#{$i}::before {
+        width: $i * 1%;
+    }
+}
+
+@for $tooltip from $start through $end {
+    $tooltip: 1 * $tooltip;
+    .progress-tooltip-#{$tooltip} {
+        left: $tooltip * 1%;
+    }
 }
 
 .progress-bar-100 {
-
     &::before {
         width: calc(100% - 0.3%);
 
@@ -20,6 +28,28 @@ $end: 10;
         @include breakpoint(sm) {
             width: calc(100% - 0.4%);
         }
+    }
+}
+
+.progress-tooltip {
+    background: #8faa9d;
+    padding: 2px 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: -40px;
+    margin-left: -25px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        position: absolute;
+        background-color: #8faa9d;
+        left: calc(50% - 4px);
+        bottom: -4px;
+        z-index: 0;
     }
 }
 
@@ -40,9 +70,10 @@ $end: 10;
 .progress-bar::before {
     border-radius: 99px;
     position: absolute;
+    display: block;
     height: 8px;
     margin: 1px 0 0 1px;
-    background: #8faa9d;
-    content: '';
-    transition: width .2s;
+    background: cadetblue;
+    content: "";
+    transition: width 0.2s;
 }

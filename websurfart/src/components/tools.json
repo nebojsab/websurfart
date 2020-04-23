@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "Git",
+        "percentage": "70"
+    },{
+        "id": 2,
+        "name": "PhotoShop",
+        "percentage": "90"
+    },{
+        "id": 3,
+        "name": "Illustrator",
+        "percentage": "80"
+    },{
+        "id": 4,
+        "name": "Sketch",
+        "percentage": "70"
+    },{
+        "id": 5,
+        "name": "Principle",
+        "percentage": "50"
+    },{
+        "id": 6,
+        "name": "Zeplin",
+        "percentage": "80"
+    },{
+        "id": 7,
+        "name": "Mural",
+        "percentage": "70"
+    },{
+        "id": 8,
+        "name": "Invision",
+        "percentage": "80"
+    },{
+        "id": 9,
+        "name": "WordPress",
+        "percentage": "85"
+    }
+]

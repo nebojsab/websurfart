@@ -1,0 +1,31 @@
+[
+    {
+        "id": "1",
+        "name": "LemonBrew",
+        "date": "2019 – present",
+        "position": "Front End Developer",
+        "desc": "Front End - Lemonbrew custom application. Replaced inherited Bootsrap classes and rules with new custom CSS selectors. This change, and usage of BEM naming convention made whole mockup to live page/design easier, which resulted in pixel perfect transfer. Also involved on creating React components both functionaly and style vice. Worked on LemonBrew style guide and created reusable components.",
+        "descii": "Front End - HTML Templates. Redesigned some 40+ Email templates. Made them more appealing and responsive at same time, so they are pixel perfect on all view-ports.",
+        "desciii": "Front End - Website. Initial work in Lemonbrew was to make all publicly facing pages on website responsive. Also used same standards as on custom application. New CSS custom selectors, using BEM naming convention.",
+        "markerName": "Belgrade, Serbia",
+        "url": "https://www.lemonbrew.com"
+    },{
+        "id": "2",
+        "name": "Embroker",
+        "date": "2015 – 2019",
+        "position": "UI / UX Designer - Front End Developer",
+        "desc": "WEB & GRAPHIC DESIGN - DEVELOPMENT. Setup and meintenance of Embroker style guide. Development of Angular directives for Embroker style guide. Work on React components for Embroker user site. Set up initial Embroker demo web site.",
+        "markerName": "Belgrade, Serbia - San Francisco, USA",
+        "url": "https://www.embroker.com"
+    },{
+        "id": "3",
+        "name": "EnmentoSoft",
+        "date": "2007 – 2015",
+        "position": "System Administrator - UI / UX Web Designer",
+        "desc": "WEB & GRAPHIC DESIGNER. Increased positive client feedback for 50% by use of PSD layered mock-ups and Axure Wireframe application.",
+        "descii": "QA - Created quality Test Cases which lead to reduced number of bugs/errors for more than 75% on client/production servers.",
+        "desciii": "TECHNICAL SUPPORT & SYSTEM ADMINISTRATOR - Used Best Practice disaster cases to maintain stability of local network and office hardware equipment.",
+        "markerName": "Belgrade, Serbia - Copenhagen, Denmark",
+        "url": ""
+    }
+]

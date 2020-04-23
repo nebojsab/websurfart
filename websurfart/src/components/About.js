@@ -18,10 +18,7 @@ class About extends Component {
                         <p className="wsa-p1">
                         I love working on projects within a team, I found that a great place to learn. I enjoy every day in my work, and I convert my love and passion for design into beautiful Web presentations.</p>
                         <p className="wsa-p1">
-                        If I can help you and or refer you to people who can meet your needs, do fell free to contact me. I would be more than happy to help out.
-                        </p>
-                        <p className="wsa-p1">
-                        Below is some of my work...
+                        Some of my work below...
                     </p>
                     </div>
                 </div>

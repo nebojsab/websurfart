@@ -74,7 +74,7 @@ export class Navbar extends Component {
                                     duration={500}
                                     onClick={this.handleBurgerClick}
                                 >
-                                    Section 3
+                                    Abilities
                             </Link>
                             </li>
                             <li className="nav-item">
@@ -83,11 +83,11 @@ export class Navbar extends Component {
                                     to="section4"
                                     spy={true}
                                     smooth={true}
-                                    offset={-70}
+                                    offset={-100}
                                     duration={500}
                                     onClick={this.handleBurgerClick}
                                 >
-                                    Section 4
+                                    Experience
                             </Link>
                             </li>
                             <li className="nav-item">
@@ -96,11 +96,11 @@ export class Navbar extends Component {
                                     to="section5"
                                     spy={true}
                                     smooth={true}
-                                    offset={-70}
+                                    offset={-300}
                                     duration={500}
                                     onClick={this.handleBurgerClick}
                                 >
-                                    Section 5
+                                    Contact
                             </Link>
                             </li>
                         </ul>

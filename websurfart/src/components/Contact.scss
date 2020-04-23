@@ -1,0 +1,42 @@
+.line {
+    border: none;
+    height: 1px;
+    width: 85%;
+    background-color: #c1c1c1;
+    margin: 40px auto;
+}
+
+.wsa-p1 {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.contacts-plh {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    flex: 1 1 50%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    a {
+        margin-left: 10px;
+        color: #c1c1c1;
+        text-decoration: none;
+        transition: .4s;
+
+        &:hover {
+            color: #fff;
+            transition: .4s;
+        }
+    }
+
+    .svg-inline--fa {
+        font-size: 150%;
+    }
+}

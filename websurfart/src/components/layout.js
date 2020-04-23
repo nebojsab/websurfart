@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          padding: `0 0 1.45rem`,
+          padding: `0`,
         }}
       >
         <main>{children}</main>
@@ -60,20 +60,17 @@ const Layout = ({ children }) => {
         <Element className="section-plh">
           <SectionContent
             id="section4"
-            title="Section 4"
-            bcg="green"
-            pageName="about" />
+            title="Career"
+            bcg="gray"
+            pageName="career" />
         </Element>
         <Element className="section-plh">
           <SectionContent
             id="section5"
-            title="Section 5"
-            bcg="gray"
-            pageName="about" />
+            title="Contact"
+            bcg="green"
+            pageName="contact" />
         </Element>
-        <footer>
-          © {new Date().getFullYear()}
-        </footer>
       </div>
     </Fragment>
   )

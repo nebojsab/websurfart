@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import About from "./About";
 import MyWork from "./MyWork";
 import Skills from "./Skills";
+import Career from "./Career";
+import Contact from "./Contact";
 
 import "./section.scss";
 
@@ -23,10 +25,10 @@ export class SectionContent extends Component {
             return <MyWork />
         } else if (pageName === 'skills') {
             return <Skills />
+        } else if (pageName === 'career') {
+            return <Career />
         } else if (pageName === 'contact') {
-            return <About />
-        } else if (pageName === 'work') {
-            return <About />
+            return <Contact />
         } else {
             return
         }
