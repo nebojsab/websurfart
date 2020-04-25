@@ -20,6 +20,17 @@ $navColorActive: #f0f0f0;
 			transition: all 0.2s;
 		}
 	}
+
+	@include breakpoint(sm) {
+		height: 100%;
+		left: -100%;
+		transition: all 0.2s;
+
+		&.is-visible {
+			left: 0;
+			transition: all 0.2s;
+		}
+	}
 }
 
 .nav-content {
@@ -32,6 +43,10 @@ $navColorActive: #f0f0f0;
 	align-items: center;
 
 	@include breakpoint(xs) {
+		flex-direction: column;
+	}
+
+	@include breakpoint(sm) {
 		flex-direction: column;
 	}
 }
@@ -47,11 +62,16 @@ $navColorActive: #f0f0f0;
 		flex-direction: column;
 		width: 100%;
 	}
+
+	@include breakpoint(sm) {
+		flex-direction: column;
+		width: 100%;
+	}
 }
 
 .nav-burger {
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 	display: none;
 	width: 30px;
 
@@ -150,6 +170,12 @@ $navColorActive: #f0f0f0;
 		top: 20px;
 		left: 20px;
 	}
+
+	@include breakpoint(sm) {
+		display: block;
+		top: 20px;
+		left: 20px;
+	}
 }
 
 .nav-item {
@@ -157,6 +183,23 @@ $navColorActive: #f0f0f0;
 	margin-bottom: 0;
 
 	@include breakpoint(xs) {
+		display: flex;
+
+		a {
+			width: 100%;
+
+			&.active {
+                background-color: #f0f0f0;
+                color: #333;
+
+				&::after {
+					content: none;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(sm) {
 		display: flex;
 
 		a {
@@ -206,6 +249,12 @@ $navColorActive: #f0f0f0;
 	color: $navColor;
 
 	@include breakpoint(xs) {
+		height: 100px;
+		line-height: 100px;
+		margin-right: 0;
+	}
+
+	@include breakpoint(sm) {
 		height: 100px;
 		line-height: 100px;
 		margin-right: 0;
